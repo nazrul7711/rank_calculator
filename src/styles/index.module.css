@@ -1,0 +1,123 @@
+.main {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--primary-white);
+  display: grid;
+  place-items: center;
+}
+.parentDiv {
+  background-color: var(--primary-white);
+  box-shadow: 4px 4px 10px 2px rgb(237, 237, 237, 0.8);
+  border-radius: var(--border-radius);
+  height: 30em;
+  width: 50em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 375px) {
+  .parentDiv {
+    width: 47em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  }
+}
+.left {
+  background-image: var(--left-color);
+  border-radius: var(--border-radius);
+}
+.circle h1 {
+  position: relative;
+  left: 38%;
+  top: 20%;
+}
+
+.circle p {
+  color: gray;
+  position: relative;
+  left: 1%;
+  top: 30%;
+}
+.left .container {
+  color: var(--secondary-white);
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.left p {
+  text-align: center;
+}
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    circle at 50% 100%,
+    rgba(135, 135, 135, 0.2),
+    blue 100%
+  );
+  background-image: var(--);
+}
+.right .container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-around;
+  margin-top: 3em;
+}
+.imgContainer p {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: 500;
+}
+.imgContainer img {
+  vertical-align: middle;
+}
+.container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+.container button {
+  line-height: 2.2;
+  color: white;
+  font-size: 20px;
+  background-color: var(--navy-blue);
+  border-radius: 50px;
+}
+@media (max-width: 375px) {
+  .circle h1 {
+    position: relative;
+    left: 35%;
+    top: 30%;
+  }
+  .circle p{
+    position: relative;
+    left: 1%;
+    top: 35%;
+  }
+  .left,
+  .right {
+    height: 120%;
+  }
+  .left .container{
+    min-height: 20rem;
+  }
+  .right .container{
+    min-height: 20rem;
+  }
+  .right .container li{
+    min-height: 50px;
+    min-width: 300px;
+  }
+
+}
